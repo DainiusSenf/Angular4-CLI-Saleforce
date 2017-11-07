@@ -1,0 +1,31 @@
+
+<apex:page controller="AngularAppController" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+
+<html>
+	<head>
+		<base href="/apex/AngularApp"/>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Angular 2 Salesforce Test</title>
+		<script type="text/javascript"> if(!window._sf) window._sf = {} </script>
+		
+			<script type="text/javascript">
+	    	window._sf.api = "{!JSENCODE($Api.Session_ID)}";
+			</script>
+		
+	</head>
+	<body>
+		  <app-root>Loading...</app-root>
+
+            <script src="{!URLFOR($Resource.AngularApp)}/inline.bundle.js"></script>
+    <script src="{!URLFOR($Resource.AngularApp)}/polyfills.bundle.js"></script>
+    <script src="{!URLFOR($Resource.AngularApp)}/scripts.bundle.js"></script>
+    <script src="{!URLFOR($Resource.AngularApp)}/styles.bundle.js"></script>
+    <script src="{!URLFOR($Resource.AngularApp)}/vendor.bundle.js"></script>
+	<script src="{!URLFOR($Resource.AngularApp)}/main.bundle.js"></script>
+
+	</body>
+</html>
+
+</apex:page>
+
