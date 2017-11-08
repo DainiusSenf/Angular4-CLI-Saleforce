@@ -2,9 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
+## Installs
+
+Instal gulp if you don't have it already.
+Run 'npm i' to instal project dependencies.
+
+## Start
+
+Raname 'config.template.js' file to 'config.js' and insert your SaleForce crendentials there.
+Create or deploy salesforce class. Example is provided in SaleForce/classes folder.
+To run local server connected with SaleForce insert your credentials into src/index.html file.
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Make sure your credentials are set in src/index.html file.
+Run 'gulp serve' to start local development server. Navigate to `http://localhost:8085/`.
 
 ## Code scaffolding
 
@@ -12,20 +24,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run 'gulp build' to build project.
 
 ## SalesForce
 
 Create AngularAppControler class in salesforce. Example is in Salesforce/classes.
+
+## Deploy to SalesForce
+
+Run 'gulp deploy' to deploy project to SalesForce.
