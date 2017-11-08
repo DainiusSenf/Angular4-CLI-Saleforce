@@ -1,25 +1,36 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import { SalesforceResolver } from './resolves/salesforce.resolver';
-import  { FancyGridRootComponent } from './fancy-grid-root/fancy-grid-root.component';
+import { FancyGridComponent} from './fancy-grid/fancy-grid.component';
 import  { TestCompComponent } from './test-comp/test-comp.component';
+import  { HighChartsComponent } from './high-charts/high-charts.component';
 
 const appRoutes: Routes = [
   {
       path: '',
-      redirectTo: 'home',
+      redirectTo: 'fancyGrid',
       pathMatch: 'full'
   },
   {
-      path: 'home',
-      component: FancyGridRootComponent,
+      path: 'fancyGrid',
+      component: FancyGridComponent,
       resolve: {
           sfdc: SalesforceResolver
       }
   },
   {
       path: 'test',
-      component: TestCompComponent
+      component: TestCompComponent,
+      resolve: {
+          sfdc: SalesforceResolver
+      }
+  },
+  {
+    path: 'highCharts',
+    component: HighChartsComponent,
+    resolve: {
+      sfdc: SalesforceResolver
+    }
   }
   // { path: '**', component: PageNotFoundComponent }
 ];

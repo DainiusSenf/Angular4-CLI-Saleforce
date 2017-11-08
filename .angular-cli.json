@@ -20,12 +20,15 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/fancygrid/client/fancy.min.css"
+        "../node_modules/fancygrid/client/fancy.min.css",
+        "../node_modules/foundation-sites/dist/css/foundation.min.css"
       ],
       "scripts": [
-		"../node_modules/fancygrid/client/fancy.min.js",
-		"../node_modules/jsforce/build/jsforce.min.js",
-		"../node_modules/lodash/lodash.min.js"		
+        "../node_modules/fancygrid/client/fancy.min.js",
+        "../node_modules/jsforce/build/jsforce.min.js",
+        "../node_modules/lodash/lodash.min.js",
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/foundation-sites/dist/js/foundation.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -16,6 +16,6 @@ require('./gulp/scripts')(gulp, config);
 require('./gulp/html')(gulp, config);
 require('./gulp/deploy')(gulp, config);
 
-gulp.task('watch:all', gulp.parallel('watch:html'))
+gulp.task('watch:all', gulp.parallel('watch:html', 'watch:scripts'));
 gulp.task('default', gulp.series('html:prod', 'visualforce:prod', gulp.parallel('watch:all')));
-gulp.task('serve', gulp.series('ng-build', 'serve-start'));
+gulp.task('serve', gulp.series('ng-build', 'serve-start'), gulp.parallel('watch:all'));

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-test-comp',
@@ -10,6 +11,7 @@ export class TestCompComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(document).foundation();
   }
 
 }
